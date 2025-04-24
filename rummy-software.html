@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamefi Technology - Rummy Software</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --box-color: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero-section-rummy {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/rummy-background.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 74vh;
+            color: white;
+            padding: 7.5rem 0;
+            text-align: center;
+        }
+
+        .stats-banner {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        /* Rummy Features Section */
+        .rummy-features-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .rummy-section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .rummy-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+
+        /* .feature-card-rummy {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            height: 80%;
+        } */
+
+        .feature-card-rummy {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding-bottom: 15px;
+            text-align: center;
+
+        }
+
+        .rummy-feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            flex-shrink: 0;
+            /* Prevents icon from shrinking */
+        }
+
+        .rummy-feature-icon img.feature-icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        .rummy-feature-name {
+            margin-top: auto;
+            /* Pushes text to bottom */
+            text-align: center;
+            padding: 10px 10px;
+            font-size: 1rem;
+            line-height: 1.3;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .rummy-feature-desc {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1199px) {
+            .rummy-feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .rummy-feature-name {
+                font-size: 1rem;
+            }
+
+            .rummy-feature-desc {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .rummy-section-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .rummy-section-title {
+                font-size: 1.8rem;
+            }
+
+            .feature-card-rummy {
+                padding: 20px 10px;
+            }
+        }
+
+        /* Rummy Variants Section */
+        .rummy-variants-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .variant-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .variant-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .variant-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .variant-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .variant-card:hover .variant-image img {
+            transform: scale(1.05);
+        }
+
+        .variant-content {
+            padding: 20px;
+        }
+
+        .variant-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .variant-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .choose-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            height: 100%;
+            border-left: 4px solid var(--secondary);
+            /* Changed from red to blue */
+        }
+
+        .choose-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            /* Changed from red to blue */
+            margin-bottom: 20px;
+        }
+
+        .choose-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .choose-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .cta-section-rummy {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .btn-primary-rummy {
+            background-color: var(--secondary);
+            /* Changed from red to blue */
+            border-color: var(--secondary);
+            /* Changed from red to blue */
+            color: white;
+        }
+
+        .btn-primary-rummy:hover {
+            background-color: #2980b9;
+            /* Darker blue */
+            border-color: #2980b9;
+            /* Darker blue */
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 767.98px) {
+            .hero-section-rummy {
+                min-height: 60vh;
+                padding: 4rem 1rem;
+            }
+
+            .rummy-section-title {
+                font-size: 1.8rem;
+            }
+
+            .variant-image {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section-rummy {
+                min-height: 50vh;
+                padding: 3rem 1rem;
+            }
+
+            .rummy-section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Rummy FAQ Section Styles */
+        .rummy-faq-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .rummy-faq-section h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .faq-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .faq-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 20px;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-question:after {
+            content: '-';
+            color: var(--primary);
+        }
+
+        .faq-item:hover .faq-question {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 15px;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .center-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .rummy-faq-section {
+                padding: 30px 15px;
+            }
+
+            .faq-container {
+                padding: 20px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+                padding-right: 25px;
+            }
+
+            .faq-answer p {
+                font-size: 15px;
+            }
+
+            .btn-primary {
+                padding: 10px 25px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rummy-faq-section h1 {
+                font-size: 24px;
+            }
+
+            .faq-question {
+                font-size: 15px;
+            }
+
+            .faq-question:after {
+                font-size: 18px;
+            }
+        }
+
+        /* rummy solution section  */
+
+        /* Rummy Solution Section Styles */
+        .rummy-solution-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/rummy_Banner.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            padding: 30px 0;
+            position: relative;
+        }
+
+        .rummy-solution-content {
+            background: var(--box-color);
+            padding: 40px;
+            border-radius: 8px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin-left: auto;
+        }
+
+        .rummy-solution-content h2 {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .rummy-solution-content .lead {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: 400;
+
+        }
+
+        .features-intro {
+            font-weight: 400;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .feature-box {
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .feature-list li:before {
+            content: "•";
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1199px) {
+            .rummy-solution-content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .rummy-solution-section {
+                padding: 80px 0;
+            }
+
+            .rummy-solution-content {
+                margin: 0 auto;
+            }
+
+            .col-lg-6.d-none.d-lg-block {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .rummy-solution-section {
+                padding: 60px 0;
+                background-attachment: scroll;
+            }
+
+            .rummy-solution-content {
+                padding: 25px;
+            }
+
+            .rummy-solution-content h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .rummy-solution-content {
+                padding: 20px 15px;
+            }
+
+            .rummy-solution-content h2 {
+                font-size: 24px;
+            }
+
+            .feature-box h3 {
+                font-size: 10px;
+            }
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto 40px;
+            max-width: 800px;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .features-list li:before {
+            content: "•";
+            color: var(--primary);
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .divider {
+            border: none;
+            height: 2px;
+            background-color: var(--primary);
+            margin: 30px auto;
+            max-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section-rummy">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Premium Rummy Software Solutions</h1>
+            <p class="lead mb-5">Launch your own online rummy platform with our feature-rich, customizable software that
+                offers seamless gameplay, secure transactions, and complete back-office management.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg px-4 me-md-2">Get a Free Consultation</a>
+            <div class="mt-4">
+                <img src="images/consultation.png" alt="Licensed & Secure" class="img-fluid"
+                    style="max-width: 150px; height: 120px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rummy Features Section -->
+    <section class="rummy-features-section">
+        <div class="container">
+            <h2 class="rummy-section-title">Our Rummy Software Features</h2>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/rummy-point.png" alt="Point Rummy" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Point Rummy</h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/pool-rummy.png" alt="Pool Rummy" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Pool Rummy</h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/deal-rummy.png" alt="Deal Rummy" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Deal Rummy</h3>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/Tournaments.png" alt="Tournaments" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Tournaments</h3>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/rummy-table.png" alt="Private Table" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Private Table
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/Multi-Language.png" alt="Multi-Language" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Multi-Language
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/Rewards-Loyalty.png" alt="Rewards & Loyalty" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Rewards & Loyalty
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/Back-Office.png" alt="Back Office & CRM" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Back Office & CRM
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/rng-removebg-preview.png" alt="RNG Certified Games"
+                                class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">RNG Certified Games
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/Anti-Fraud.png" alt="Anti Fraud System" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Anti Fraud System
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/responsible-gambling.png" alt="Responsible Gaming"
+                                class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Responsible Gaming
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-xl-2 col-lg-4 col-md-6">
+                    <div class="feature-card-rummy">
+                        <div class="rummy-feature-icon">
+                            <img src="images/security.png" alt="Payment Security" class="feature-icon-img">
+                        </div>
+                        <h3 class="rummy-feature-name">Payment Security
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rummy-solution-section">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Blank Column (for spacing) -->
+                <div class="col-lg-6 d-none d-lg-block"></div>
+
+                <!-- Content Column -->
+                <div class="col-lg-6">
+                    <div class="rummy-solution-content">
+                        <h2>Online Rummy Software Solution
+                        </h2>
+                        <p class="lead">Gemefi offers cutting-edge rummy software, built by gaming experts
+                            using
+                            advanced technologies. Our solutions include key game variants like Point, Pool, and Deal
+                            Rummy, along with tools to easily host and manage tournaments.
+                        </p>
+
+                        <p class="features-intro">The main features and advantages of selecting Mobzway are listed below
+                        </p>
+                        <div class="feature-box">
+                            <h5> Advanced Technology
+                            </h5>
+                            <ul class="feature-list">
+                                <li>Built with the latest gaming tools</li>
+                                <li> Developed by experienced professionals</li>
+                            </ul>
+                        </div>
+                        <div class="feature-box">
+                            <h5>A Variety of Rummy Games</h5>
+                            <ul class="feature-list">
+                                <li>Pool Rummy</li>
+                                <li>Point Rummy</li>
+                                <li>Deal Rummy</li>
+                                <li>Other Variations</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-light btn-lg px-4 me-md-2">REQUEST A QUOTE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rummy Variants Section -->
+    <section class="rummy-variants-section">
+        <div class="container">
+            <h2 class="rummy-section-title">Popular Rummy Variants</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="variant-card">
+                        <div class="variant-image">
+                            <img src="images/deals-rummy-bg.webp" alt="Deals Rummy">
+                        </div>
+                        <div class="variant-content">
+                            <h3 class="variant-title">Deals Rummy</h3>
+                            <p class="variant-desc">Players play a fixed number of deals and the winner is decided based
+                                on total points accumulated.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="variant-card">
+                        <div class="variant-image">
+                            <img src="images/rummy-points-bg.jpeg" alt="Points Rummy">
+                        </div>
+                        <div class="variant-content">
+                            <h3 class="variant-title">Points Rummy</h3>
+                            <p class="variant-desc">The fastest version of rummy where each game is played for points
+                                with a pre-decided rupee value.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="variant-card">
+                        <div class="variant-image">
+                            <img src="images/pool-rummy-bg.jpeg" alt="Pool Rummy">
+                        </div>
+                        <div class="variant-content">
+                            <h3 class="variant-title">Pool Rummy</h3>
+                            <p class="variant-desc">Players pay a fixed entry fee which forms the prize pool, and play
+                                until they reach the maximum points limit.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary-rummy">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="rummy-features-section">
+        <h2 class="section-title">WHY CHOOSE GAMEFI'S RUMMY SOFTWARE?</h2>
+
+        <ul class="features-list">
+            <li>Product designed by a team of rummy experts</li>
+            <li>Years of experience in rummy software development</li>
+            <li>Solutions compatible with all platforms – Web, iOS, and Android</li>
+            <li>Cost-effective and time-saving gaming solutions</li>
+            <li>Powerful and secure coding</li>
+            <li>Fast and on-time delivery</li>
+            <li>Free business and marketing guidance for startups</li>
+            <li>24/7 technical support with quick response</li>
+        </ul>
+
+        <hr class="divider">
+        <div class="center-button">
+            <a href="contact.html" class="btn btn-primary btn-lg px-4 me-md-2">REQUEST A QUOTE</a>
+        </div>
+    </section>
+
+
+    <!-- Our Rummy Software Platforms -->
+    <section class="rummy-variants-section">
+        <div class="container">
+            <h2 class="rummy-section-title">Our Rummy Software Platforms</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="variant-card">
+                        <div class="variant-image">
+                            <img src="images/htlm-5.jpeg" alt="HTML 5 Browser">
+                        </div>
+                        <div class="variant-content">
+                            <h3 class="variant-title">HTML 5 Browser</h3>
+                            <p class="variant-desc">
+                                Invest in an HTML5-based rummy software that is highly adaptable for your online rummy
+                                business. Our games are flexible with all main browsers and screen sizes, so your
+                                clients can easily play rummy on any device</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="variant-card">
+                        <div class="variant-image">
+                            <img src="images/mobile-native.png" alt="Deals Rummy">
+                        </div>
+                        <div class="variant-content">
+                            <h3 class="variant-title">Native Mobile</h3>
+                            <p class="variant-desc">Native Mobile
+                                With our innovative native mobile apps for iOS and Android, you can keep your rummy
+                                players interested. Our apps guarantee a smooth and enjoyable mobile gaming experience
+                                with features like social logins, multiplayer gaming, safe payment channels, and more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="variant-card">
+                        <div class="variant-image">
+                            <img src="images/mac-pc.jpeg" alt="Pool Rummy">
+                        </div>
+                        <div class="variant-content">
+                            <h3 class="variant-title">MAC / PC</h3>
+                            <p class="variant-desc">MAC / PC
+                                Now give MAC and PC users access to rummy software with our simple online rummy game
+                                software download. Our skilled developers create rummy software for Mac and Windows
+                                computers. This PC rummy game software has unique features, including amazing visual
+                                effects, quality sound effects, and multiple pay choices.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary-rummy">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="rummy-faq-section">
+        <div class="faq-container">
+            <h2>RUMMY SOFTWARE FAQS</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I start my own rummy website in India?</div>
+                <div class="faq-answer">
+                    <p>To start your own rummy website in India, you need a reliable rummy software provider who can
+                        offer you a complete solution including website development, game integration, licensing
+                        assistance, and technical support. Companies like Mobzway help you launch a fully-functional
+                        platform that’s ready for real-money gameplay.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are the variations of rummy games you are offering?</div>
+                <div class="faq-answer">
+                    <p>We offer multiple popular rummy game variations including Points Rummy, Pool Rummy (101 and 201),
+                        Deals Rummy, and Indian Rummy. Our platform also supports private tables, tournaments, and
+                        customizable rules.</p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">What are all the legal permissions required to start a rummy website in India?
+                </div>
+                <div class="faq-answer">
+                    <p>Rummy is recognized as a game of skill in India and is legal in most states. However, to operate
+                        legally, you need to incorporate your business, comply with KYC and data privacy laws, and avoid
+                        offering the game in restricted states like Telangana or Andhra Pradesh. Professional assistance
+                        is recommended to ensure full compliance.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is the procedure to get a license for an online rummy software in India?
+                </div>
+                <div class="faq-answer">
+                    <p>India does not currently have a centralized licensing body for skill-based games like rummy.
+                        However, states like Nagaland offer licenses under their gaming acts. You’ll need to apply with
+                        detailed documentation and comply with tech and legal standards. We help guide you through this
+                        process if needed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How much money can be earned through an online rummy website?</div>
+                <div class="faq-answer">
+                    <p>Online rummy platforms can be highly profitable depending on user base, marketing strategies, and
+                        engagement. Revenue comes from entry fees, rake, and in-app purchases. A successful platform can
+                        generate substantial income within months if well promoted and efficiently managed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will you provide a rummy website or also mobile apps?</div>
+                <div class="faq-answer">
+                    <p>Yes, we provide a fully responsive rummy website along with native mobile apps for Android and
+                        iOS. This allows your users to enjoy smooth gameplay across all devices.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will you take care of payment gateway integration or I have to take care of
+                    it?</div>
+                <div class="faq-answer">
+                    <p>We handle the entire payment gateway integration process for you. Our team ensures that your
+                        platform supports secure and seamless transactions for deposits and withdrawals with trusted
+                        payment providers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What kind of server do I need to have to run an online rummy game?</div>
+                <div class="faq-answer">
+                    <p>You need a secure, scalable server with low latency to host your rummy platform. Cloud solutions
+                        like AWS or Google Cloud are often used. We help set up and manage the hosting environment for
+                        optimal performance.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will you also provide an admin panel to manage the rummy website?</div>
+                <div class="faq-answer">
+                    <p>Yes, we provide a complete admin panel that allows you to manage players, control game settings,
+                        monitor financial transactions, handle support tickets, and generate reports all from one
+                        dashboard.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is your rummy website secure enough to handle fraud or hacking?</div>
+                <div class="faq-answer">
+                    <p>Absolutely. Our rummy software is developed with top-notch security protocols including SSL
+                        encryption, anti-fraud systems, secure payment gateways, and real-time user monitoring to
+                        protect your platform from threats and ensure fair gameplay.</p>
+                </div>
+            </div>
+        </div>
+        <div class="center-button">
+            <a href="contact.html" class="btn btn-primary btn-lg px-4 me-md-2">Ask a Question</a>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section-rummy">
+        <div class="container">
+            <h2 class="mb-4">Ready to Launch Your Rummy Platform?</h2>
+            <p class="lead mb-5">Get in touch with our experts today for a free consultation and demo of our rummy
+                software solution.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-light btn-lg px-4 me-md-2">Request Demo</a>
+                <a href="https://wa.me/919694396993?text=Hello%20I%20want%20to%20talk%20about%20your%20services"
+                    class="btn btn-outline-light btn-lg px-4" id="callUsButton">
+                    <i class="fas fa-phone-alt me-2"></i> Call Us Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        document.getElementById('callUsButton').addEventListener('click', function (e) {
+            // Check if it's a mobile device
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+            // If not mobile and href is tel: link, scroll to contact instead
+            if (!isMobile && this.getAttribute('href').startsWith('tel:')) {
+                e.preventDefault();
+                const contactSection = document.querySelector('contact.html');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+
+    <!-- Footer dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load header and footer -->
+
+    <!-- Custom JS -->
+    <script src="js/loadComponents.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2170 @@
+/* Custom Styles */
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #3498db;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --green: #2ecc71;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 60px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(15, 1, 20, 0.8), rgba(15, 1, 20, 0.8)),
+        url('../images/hero-bg.jpg');
+    background-size: cover;
+    min-height: 82vh;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 78px;
+}
+
+/* Services */
+.service-card {
+    transition: transform 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+}
+
+.solutions-hero {
+    background: linear-gradient(rgba(28, 2, 37, 0.8), rgba(141, 99, 157, 0.8));
+    background-size: cover;
+    min-height: 70vh;
+    color: white;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.services-section {
+    padding-top: 70px;
+}
+
+
+.rgb-q {
+    background: color(rgb(111, 65, 230))
+}
+
+.footer-bg {
+    background: color(rgb(29, 37, 48))
+}
+
+.games-section-ludo {
+    background: linear-gradient(rgba(240, 222, 247, 0.8), rgba(240, 222, 247, 0.8));
+    background-size: cover;
+}
+
+.games-section-rummy {
+    background: linear-gradient(rgb(217, 246, 250), rgb(217, 246, 250));
+    background-size: cover;
+}
+
+.games-section-poker {
+    background: linear-gradient(rgb(222, 247, 247), rgb(206, 207, 207));
+    background-size: cover;
+}
+
+.games-section-thinpatti {
+    background: linear-gradient(rgb(206, 207, 207), rgb(206, 207, 207));
+    background-size: cover;
+}
+
+.games-section-banner {
+    background: linear-gradient(rgb(3, 248, 248), rgb(206, 207, 207));
+    min-height: 82vh;
+    background-size: cover;
+    padding-top: 170px;
+    padding-bottom: 80px;
+
+}
+
+.hover-text-primary:hover {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: rgba(13, 110, 253, 0.8);
+    transform: translateY(-3px);
+}
+
+.game-item {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.game-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.game-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+}
+
+.platform-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.filter-btn.active {
+    background: #0d6efd;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .game-item .row {
+        flex-direction: column;
+    }
+
+    .game-item .col-md-4 {
+        width: 100%;
+        height: 200px;
+    }
+
+    .game-item .col-md-8 {
+        width: 100%;
+    }
+}
+
+.games-section-poker {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.game-features li {
+    transition: transform 0.2s;
+}
+
+.game-features li:hover {
+    transform: translateX(5px);
+}
+
+.tech-specs {
+    border-left: 4px solid #0d6efd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+    font-size: 0.6rem;
+    padding: 0.35em 0.65em;
+}
+
+/* Floating WhatsApp button */
+.floating-whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.0rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none !important;
+}
+
+.floating-whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #128C7E;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(110, 13, 136, 0.1);
+}
+
+.bg-primary-light {
+    background-color: rgba(110, 13, 136, 0.1);
+}
+
+/* Add this to your existing CSS */
+.navbar {
+    height: 100px;
+    /* Fixed height */
+}
+
+.logo {
+    height: 40px;
+    /* Logo ki actual size chhoti */
+    transform: scale(2);
+    /* Visually bada karega */
+    transform-origin: center;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Specific styles for the Contact Us link */
+.navbar-nav .nav-item:last-child .nav-link {
+    background-color: #007bff;
+    /* Blue background */
+    color: white !important;
+    /* White text */
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+/* Hover effect */
+.navbar-nav .nav-item:last-child .nav-link:hover {
+    background-color: #0069d9;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+/* For mobile view - adjust the animation */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-item:last-child .nav-link {
+        display: inline-block;
+        margin-top: 10px;
+        width: auto;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.contact-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-position: center;
+    min-height: 58vh;
+    color: white;
+    padding: 7.5rem 0;
+    text-align: center;
+}
+
+/* index file css start */
+
+.hero-section-index {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/poker-cards-bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 74vh;
+    color: white;
+    padding: 5.5rem 0;
+    text-align: center;
+}
+
+.stats-banner {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.2rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.feature-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(226, 4, 4, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.platform-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--light);
+    height: 100%;
+}
+
+.dev-process {
+    background-color: var(--light);
+    padding: 3rem 0;
+}
+
+.process-step {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    padding: 4rem 0;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Poker Features Section */
+.poker-features-section {
+    padding: 80px 0;
+    background: var(--light);
+    color: #000000;
+}
+
+.poker-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.poker-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.poker-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.poker-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.poker-feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(141, 99, 157, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.poker-feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+}
+
+.poker-feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(251, 248, 248, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.poker-feature-card:hover .poker-feature-icon {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.poker-feature-icon img {
+    width: 50%;
+    height: auto;
+}
+
+.poker-feature-name {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.poker-feature-desc {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 2px solid transparent;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767.98px) {
+    .hero-section-index {
+        min-height: 60vh;
+        padding: 4rem 1rem;
+    }
+
+    .hero-section-index h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section-index p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .stats-banner .col-md-3 {
+        margin-bottom: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    .poker-section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .poker-features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .poker-feature-card {
+        padding: 20px;
+    }
+
+    #services .lead {
+        font-size: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section .d-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-section .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    #responsible-gaming .row {
+        flex-direction: column-reverse;
+    }
+
+    #responsible-gaming .col-md-6 {
+        margin-bottom: 2rem;
+    }
+
+    #responsible-gaming img {
+        margin-top: 2rem;
+    }
+
+    #games .col-md-3 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section-index {
+        min-height: 50vh;
+        padding: 3rem 1rem;
+    }
+
+    .hero-section-index h1 {
+        font-size: 1.8rem;
+    }
+
+    .poker-section-title {
+        font-size: 1.5rem;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .stat-item {
+        padding: 0.5rem;
+    }
+}
+
+/* index file css end */
+/* casino software file css start */
+
+/* Hero Section */
+.casino-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/realistic-casino-gambling.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 100px 0;
+}
+
+.casino-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.casino-hero .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-cards {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    z-index: 1;
+    animation: rouletteSpin 3s linear infinite;
+}
+
+@keyframes rouletteSpin {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-55%) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+}
+
+/* Games Showcase */
+.games-showcase {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.game-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.game-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.game-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    color: white;
+}
+
+/* Live Casino Section */
+.live-casino {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+}
+
+.live-dealer-img {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.live-dealer-img:hover {
+    transform: scale(1.03);
+}
+
+/* Slots Gallery */
+.slots-gallery {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.slot-machine {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.slot-machine:hover {
+    transform: scale(1.05);
+}
+
+/* VIP Section */
+.vip-section {
+    padding: 80px 0;
+    background: url('../images/casino-banner.jpg') center/cover no-repeat;
+    color: white;
+    position: relative;
+}
+
+.vip-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.vip-content {
+    position: relative;
+    z-index: 1;
+}
+
+.vip-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.vip-card:hover {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+/* CTA Section */
+.casino-cta {
+    padding: 80px 0;
+    background: var(--primary);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-cards {
+        display: none;
+    }
+
+    .casino-hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .casino-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .game-img {
+        height: 200px;
+    }
+}
+
+/* casino features */
+
+.casino-features {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317') center/cover no-repeat;
+}
+
+.feature-card {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.1);
+    border-color: rgba(255, 193, 7, 0.5);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 193, 7, 0.1);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h2 {
+    color: var(--green);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 30px 0 15px 0;
+}
+
+h3 {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* casino software file css end */
+/* Ludo development file css start */
+
+/* Hero Section */
+.hero-section-ludo {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../images/ludo-board-game.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 84vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-section-ludo h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-section-ludo .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background-color: rgb(227, 226, 226);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.feature-box {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    height: 267px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border: 1px solid #eee;
+}
+
+.feature-icon {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(141, 99, 157, 0.1);
+    border-radius: 50%;
+}
+
+.feature-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.feature-desc {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Modes Section */
+.ludo-modes-section {
+    padding: 80px 0;
+    background-color: rgb(227, 226, 226);
+}
+
+.mode-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.mode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mode-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.mode-title {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.mode-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Custom Development Section */
+.custom-dev-section {
+    padding: 80px 0;
+    background-color: var(--box-shadow);
+}
+
+.custom-dev-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.custom-dev-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.feature-item {
+    margin-bottom: 1.5rem;
+}
+
+.feature-item i {
+    color: green;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.faq-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-question {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: #555;
+    line-height: 1.5;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-top: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-section .lead {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 2px solid transparent;
+    padding: 0.75rem 1.75rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    border-radius: 50px;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--purple);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #7a4d8b;
+    border-color: #7a4d8b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero-section-ludo h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section-ludo h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section-ludo .lead {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section-ludo {
+        min-height: auto;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero-section-ludo h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section-ludo h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-box {
+        height: auto;
+        padding: 25px 20px;
+    }
+}
+
+/* Ludo development file css end */
+/* poker software file css end */
+
+.hero-section-poker {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/poker-casino-banner.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 74vh;
+    color: white;
+    padding: 7.5rem 0;
+    text-align: center;
+}
+
+.stats-banner {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.2rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.feature-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(226, 4, 4, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.platform-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--light);
+    height: 100%;
+}
+
+.dev-process {
+    background-color: var(--light);
+    padding: 3rem 0;
+}
+
+.process-step {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    padding: 4rem 0;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Poker Features Section */
+.poker-features-section {
+    padding: 80px 0;
+    background: var(--light);
+    color: #000000;
+}
+
+.poker-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.poker-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.poker-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.poker-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.poker-feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(141, 99, 157, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.poker-feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+}
+
+.poker-feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(251, 248, 248, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.poker-feature-card:hover .poker-feature-icon {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.poker-feature-icon img {
+    width: 50%;
+    height: auto;
+}
+
+.poker-feature-name {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.poker-feature-desc {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 2px solid transparent;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767.98px) {
+    .hero-section-poker {
+        min-height: 60vh;
+        padding: 4rem 1rem;
+    }
+
+    .hero-section-poker h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section-poker p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .stats-banner .col-md-3 {
+        margin-bottom: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    .poker-section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .poker-features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .poker-feature-card {
+        padding: 20px;
+    }
+
+    #services .lead {
+        font-size: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section .d-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-section .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    #responsible-gaming .row {
+        flex-direction: column-reverse;
+    }
+
+    #responsible-gaming .col-md-6 {
+        margin-bottom: 2rem;
+    }
+
+    #responsible-gaming img {
+        margin-top: 2rem;
+    }
+
+    #games .col-md-3 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section-poker {
+        min-height: 50vh;
+        padding: 3rem 1rem;
+    }
+
+    .hero-section-poker h1 {
+        font-size: 1.8rem;
+    }
+
+    .poker-section-title {
+        font-size: 1.5rem;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .stat-item {
+        padding: 0.5rem;
+    }
+}
+
+.poker-featurs-container {
+    margin: 0 auto;
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #222;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #4a6bff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 210px;
+    border: 2px solid #e0e0e0;
+}
+
+.feature-card:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(0px);
+    box-shadow: 0 10px 20px rgba(216, 198, 198, 0.1);
+    border-color: #4a6bff;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.feature-icon img {
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+}
+
+.feature-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.related-products-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    /* Reduced vertical padding */
+}
+
+
+.product-card {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid var(--primary);
+    /* max-width: 300px; ⛔ REMOVE THIS LINE */
+    max-width: 85%;
+    /* ✅ Let Bootstrap control the width */
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.product-image {
+    height: 160px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 2px 2px 0 0;
+    padding: 0;
+    margin: 0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Changed to cover for better image display */
+}
+
+.product-title {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    /* Slightly smaller font */
+    font-weight: 600;
+    padding: 5px 15px 0;
+    text-align: center;
+    /* Adjusted padding */
+    margin: 0;
+    /* Removed the underline completely */
+}
+
+.product-description {
+    color: #555;
+    line-height: 1.6;
+    padding: 0 15px 15px;
+    /* Adjusted padding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        max-width: 100%;
+        /* Full width on mobile */
+        padding: 0;
+        /* Removed padding */
+    }
+
+    .product-image {
+        height: 140px;
+        /* Smaller on mobile */
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+        padding: 10px 10px 0;
+    }
+
+    .product-description {
+        padding: 0 10px 10px;
+    }
+}
+
+.row.no-gap {
+    --bs-gutter-x: 0rem;
+}
+
+.poker-faq-section {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.poker-faq-section h1 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.faq-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-weight: bold;
+    color: var(--dark);
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+}
+
+.faq-question:after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.faq-item.active .faq-question:after {
+    content: '-';
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-top: 10px;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.center-button {
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+/* poker file code end */
+/* teen-patti file code start */
+
+/* Hero Section */
+.hero-teenpatti {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/mobile_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 100px 0;
+}
+
+.hero-teenpatti h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: white;
+}
+
+.hero-teenpatti .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.card-animation {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    z-index: 1;
+}
+
+/* Features Section */
+.teenpatti-features {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--purple), var(--primary));
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Game Variations */
+.game-variations {
+    padding: 80px 0;
+    background: var(--box-shadow);
+    color: rgb(0, 0, 0);
+}
+
+.variation-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.variation-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Technology Stack */
+.tech-stack {
+    padding: 80px 0;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+}
+
+/* CTA Section */
+.teenpatti-cta {
+    background: var(--primary);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .card-animation {
+        display: none;
+    }
+
+    .hero-teenpatti h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-teenpatti h1 {
+        font-size: 2.2rem;
+    }
+}
+
+.teenpatti-variations {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-red);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary);
+}
+
+.variation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.variation-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--dark-red);
+}
+
+.variation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.variation-icon {
+    font-size: 2.5rem;
+    color: var(--dark-red);
+    margin-bottom: 15px;
+}
+
+.variation-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.variation-desc {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .variation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .variation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* teen-patti file code end */
+
+/* About Page Specific Styles  start */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/aboutus_thumb.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.mission-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary);
+}
+
+.values-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.values-list li {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-left: 60px;
+}
+
+.values-list li i {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* About Page Specific Styles end*/

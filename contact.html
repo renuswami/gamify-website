@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Gamefi Technology</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="header-container"></div>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center contact-section">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
+                    <p class="lead">Have questions or want to discuss a project? Reach out to our team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="contact-card p-4 h-100 bg-white text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Our Location</h5>
+                        <p class="mb-0">Gamefi Technology<br>
+                            1st Floor Office, Gopi Tower,<br>
+                            Satya Colony, Tagore Nagar,
+                            200 Fit Ajmer Road,<br> Jaipur
+                            Rajasthan (302016), India</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-card p-4 h-100 bg-white text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h5>Phone Number</h5>
+                        <p class="mb-0">(+91) 9953440456</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-card p-4 h-100 bg-white text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Address</h5>
+                        <p class="mb-0">info@yudiz.com<br>support@yudiz.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card p-4 p-lg-5 bg-white">
+                        <h4 class="text-center mb-4">Send Us a Message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" name="mobile" class="form-control"
+                                        placeholder="Your Mobile Number" required pattern="[0-9]{10}"
+                                        title="Please enter a 10-digit mobile number">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message"
+                                        required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                mobile: form.mobile.value,
+                subject: form.subject.value,
+                message: form.message.value
+            };
+
+            try {
+                // Add no-cors mode and omit headers for Google Apps Script
+                const response = await fetch('https://script.google.com/macros/s/AKfycby-8tk1Nr_IEZwUZarB1H2n4DiJU1KB8Ygv3VtqivPOLi1g-ZnfMOX4bjPED4nUyrMS/exec', {
+                    method: 'POST',
+                    mode: 'no-cors', // Important for Google Apps Script
+                    body: JSON.stringify(data)
+                });
+
+                // Since we're using no-cors, we can't read the response directly
+                alert('Message sent successfully!');
+                form.reset();
+
+            } catch (error) {
+                alert('Message received! We will contact you shortly.');
+                console.log('Error:', error);
+                form.reset(); // Still reset form even if we can't verify
+            }
+        });
+    </script>
+
+    <!-- Footer dynamically loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load header and footer -->
+
+    <!-- Custom JS -->
+    <script src="js/loadComponents.js"></script>
+</body>
+</body>
+
+</html>
